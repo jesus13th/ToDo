@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Editar"
+             x:Class="ToDo.App.Views.EditPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" x:Name="guardar" Clicked="guardarBtn_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Nombre" FontSize="Medium" TextColor="{StaticResource colorPrimary}" />
+            <Entry Text ="{Binding Item.Name}"  x:Name="nombreEntry"/>
+            <Label Text="Descripcion" FontSize="Medium" TextColor="{StaticResource colorPrimary}" />
+            <Entry Text="{Binding Item.Description}" VerticalTextAlignment="Start" HeightRequest="200" x:Name="descripcionEntry" />
+            <Label Text="Fecha" FontSize="Medium" TextColor="{StaticResource colorPrimary}"/>
+            <DatePicker  x:Name ="registerDate" Date="{Binding Item.DateTime}"/>
+            <Label Text="Fecha" FontSize="Medium" TextColor="{StaticResource colorPrimary}"/>
+            <TimePicker x:Name="registerTime" Time="{Binding Time}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
